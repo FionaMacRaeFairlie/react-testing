@@ -3,7 +3,7 @@ import Account from "./Account";
 
 class App extends Component {
   state = {
-    isLoading: true,
+    isLoading: true, 
     users: [],
     error: null,
   };
