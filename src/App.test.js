@@ -1,15 +1,16 @@
 import React from "react";
+import { shallow, mount } from "enzyme";
 import Account from "./Account";
 import App from "./App";
 
 
-it("renders correctly", () => {
-    const wrapper = mount(<App />);
-    expect(wrapper.state("error")).toEqual(null);
-  });
-  it("renders without crashing", () => {
-    shallow(<App />);
-  });
+// it("renders correctly", () => {
+//  const wrapper = mount(<App />);
+//  expect(wrapper.state("error")).toEqual(null);
+//   });
+//   it("renders without crashing", () => {
+//  shallow(<App />);
+//   });
   
 
 const user = {
@@ -31,25 +32,25 @@ describe("<Account />", () => {
   });
 });
 
- it("renders welcome message", () => {
-  const wrapper = shallow(<App />);
-  const welcome = <h2>Welcome to React Testing</h2>;
-  // expect(wrapper.contains(welcome)).toBe(true);
-  expect(wrapper.contains(welcome)).toEqual(true);
-});
+//  it("renders welcome message", () => {
+//   const wrapper = shallow(<App />);
+//   const welcome = <h2>Welcome to React Testing</h2>;
+//   // expect(wrapper.contains(welcome)).toBe(true);
+//   expect(wrapper.contains(welcome)).toEqual(true);
+// });
 
- it("renders without crashing", () => {
-  const mockColor = "David";
-  const wrapper = shallow(<App color={mockColor} />);
-  expect(toJson(wrapper)).toMatchSnapshot();
-});
-
-
-//  it("correctly increment the counter", () => {
-//   const mockColor = "david";
+//  it("renders without crashing", () => {
+//   const mockColor = "David";
 //   const wrapper = shallow(<App color={mockColor} />);
-//   wrapper.find('[id="counter"]').simulate("click");
-//   wrapper.find('[id="counter"]').simulate("click");
-//   expect(wrapper.state()).toEqual({ count: 3 });
-//   expect(wrapper.props().color).toEqual("david");
-}); 
+//   expect(toJson(wrapper)).toMatchSnapshot();
+// });
+
+
+// //  it("correctly increment the counter", () => {
+// //   const mockColor = "david";
+// //   const wrapper = shallow(<App color={mockColor} />);
+// //   wrapper.find('[id="counter"]').simulate("click");
+// //   wrapper.find('[id="counter"]').simulate("click");
+// //   expect(wrapper.state()).toEqual({ count: 3 });
+// //   expect(wrapper.props().color).toEqual("david");
+// }); 
