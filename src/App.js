@@ -6,6 +6,7 @@ class App extends Component {
     isLoading: true, 
     users: [],
     error: null,
+    count:3
   };
 
   fetchUsers() {
